@@ -12,8 +12,8 @@ class EmailAddressParser
 
     def parse
         email_addresses = @emails.gsub(/,|\s/, " ").split.uniq
-        email = email_addresses.map.with_index do |address, i|
-            email_addresses[i]
+        email = email_addresses.map do |address|
+            address
         end
         email
     end
