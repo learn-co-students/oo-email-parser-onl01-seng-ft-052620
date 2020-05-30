@@ -13,8 +13,7 @@ class EmailAddressParser
     def parse
         email_addresses = @emails.gsub(/,|\s/, " ").split.uniq
         email = email_addresses.map.with_index do |address, i|
-            individual = email_addresses[i]
-            individual
+            email_addresses[i]
         end
         email
     end
