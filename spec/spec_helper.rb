@@ -6,5 +6,5 @@ require_relative '../lib/email_parser'
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  # config here
+#config here
 end
