@@ -6,10 +6,12 @@
 class EmailAddressParser
   attr_accessor :emails
 
-  def initialize(emails_string)
-    @emails_string = emails_string
+  def initialize(emails)
+    @emails = emails
   end
+  
   def parse        
-    return @emails_string.split(%r{,\s*|\s+}).uniq #checks for ",", ", " or " " in regex pattern, returns array with unique values
+    email_array = emails.delete(",").split(" ")
+    email_array.uniq
   end
 end
