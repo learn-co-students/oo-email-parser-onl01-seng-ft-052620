@@ -16,19 +16,8 @@ class EmailAddressParser
 
     def parse
         
-        store_emails = []
 
-        if @emails.include?(",") && !@emails.include?(" ")
-            store_emails << @emails.split(",")
-        elsif @emails.include?(" ") && !@emails.include?(", ")
-            store_emails << @emails.split(" ")
-        elsif @emails.include?(" ") && @emails.include?(", ")
-            store_emails << @emails.split(",").join.split(" ")
-            
-        end
-       
-
-        store_emails.flatten.uniq
+        emails.split(/, | /).uniq
         
     end
 
